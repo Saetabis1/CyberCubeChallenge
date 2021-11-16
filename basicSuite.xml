@@ -1,0 +1,20 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite thread-count="1" verbose="1" name="Basic suite" annotations="JDK" parallel="tests">
+
+    <listeners>
+        <listener class-name="cybercubeChallenge.listener.ExtentTestNGIReporterListener" />
+    </listeners>
+
+    <test name="apiTests">
+        <classes>
+            <class name="cybercubeChallenge.ApiTests"/>
+        </classes>
+    </test>
+
+    <test name="uiTests">
+        <classes>
+            <class name="cybercubeChallenge.UiTests"/>
+        </classes>
+    </test>
+</suite>
