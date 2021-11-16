@@ -16,32 +16,32 @@ public class UserService {
         this.api = services;
     }
 
-    public Response postUser(CreateUserRequest user) {
+    public Response postUser(CreateUserRequest user, Integer statusCode) {
 
         return api
                 .setContentType(ContentType.JSON)
                 .setRequestUrl("api/users")
-                .postRequest(user,201)
+                .postRequest(user,statusCode)
                 .getResponse();
     }
 
-    public Response putUser(String id, CreateUserRequest userRequest) {
+    public Response putUser(String id, CreateUserRequest userRequest, Integer statusCode) {
 
         checkArgument(id != null,"Parameters cant be null");
         return api
                 .setContentType(ContentType.JSON)
                 .setRequestUrl("api/users/%s",id)
-                .putRequest(userRequest,200,null)
+                .putRequest(userRequest,statusCode,null)
                 .getResponse();
     }
 
-    public Response deleteUser(String id) {
+    public Response deleteUser(String id, Integer statusCode) {
 
         checkArgument(id != null,"Parameters cant be null");
         return api
                 .setContentType(ContentType.JSON)
                 .setRequestUrl("api/users/%s",id)
-                .deleteRequest(204)
+                .deleteRequest(statusCode)
                 .getResponse();
     }
 }

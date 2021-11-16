@@ -40,3 +40,13 @@ Java project is divided in the followings
 2. Install Maven
 3. Execute < mvn clean test -DsuiteXmlFile=basicSuite > 
 4. Results can be found in test-output/ folder
+
+## Final aclarations
+
+There are 5 negative Api tests that fails due from my point of view errors in the api, that should be changed:
+
+- ApiTests.verifyUserCreationWithNullJob > You shouldn't be able to add an user with Null job
+- ApiTests.verifyUserCreationWithNullName > You shouldn't be able to add an user with Null name
+- ApiTests..verifyUserUpdateWithDecimalId > Users with decimal Ids do not exist
+- ApiTests.verifyUserUpdateWithNegativeId > Users with negative Ids do not exist
+- ApiTests.verifyUserUpdateWithNullName > You shouldn't be able to update an user with Null name removing it
