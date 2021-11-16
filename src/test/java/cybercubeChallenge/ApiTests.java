@@ -45,12 +45,8 @@ public class ApiTests extends BaseTest{
                 .build();
 
         // Creates User, Response code is checked in the method
-        CreateUserResponse createUserResponse = api.getUserService()
-                .postUser(userRequest, 400)
-                .as(CreateUserResponse.class);
-
-        assertEquals(createUserResponse.getName(),userRequest.getName());
-        assertEquals(createUserResponse.getJob(),userRequest.getJob());
+        api.getUserService()
+                .postUser(userRequest, 400);
     }
 
     @Test
@@ -64,12 +60,8 @@ public class ApiTests extends BaseTest{
                 .build();
 
         // Creates User, Response code is checked in the method
-        CreateUserResponse createUserResponse = api.getUserService()
-                .postUser(userRequest, 400)
-                .as(CreateUserResponse.class);
-
-        assertEquals(createUserResponse.getName(),userRequest.getName());
-        assertEquals(createUserResponse.getJob(),userRequest.getJob());
+        api.getUserService()
+                .postUser(userRequest, 400);
     }
 
     @Test
@@ -89,11 +81,8 @@ public class ApiTests extends BaseTest{
 
         // UpdateUser, Response code is checked in the method
         userRequest.setJob("updatedJob" + r.nextInt(999));
-        UpdateUserResponse updateUserResponse = api.getUserService()
-                .putUser(createUserResponse.getId().toString(), userRequest, 200)
-                .as(UpdateUserResponse.class);
-
-        assertEquals(updateUserResponse.getJob(),userRequest.getJob());
+        api.getUserService()
+                .putUser(createUserResponse.getId().toString(), userRequest, 200);
     }
 
     @Test
@@ -113,11 +102,8 @@ public class ApiTests extends BaseTest{
 
         // UpdateUser, Response code is checked in the method
         userRequest.setName(null);
-        UpdateUserResponse updateUserResponse = api.getUserService()
-                .putUser(createUserResponse.getId().toString(), userRequest, 400)
-                .as(UpdateUserResponse.class);
-
-        assertEquals(updateUserResponse.getJob(),userRequest.getJob());
+        api.getUserService()
+                .putUser(createUserResponse.getId().toString(), userRequest, 400);
     }
 
     @Test
@@ -137,11 +123,8 @@ public class ApiTests extends BaseTest{
 
         // UpdateUser, Response code is checked in the method
         userRequest.setJob("updatedJob" + r.nextInt(999));
-        UpdateUserResponse updateUserResponse = api.getUserService()
-                .putUser(String.valueOf(-100), userRequest, 400)
-                .as(UpdateUserResponse.class);
-
-        assertEquals(updateUserResponse.getJob(),userRequest.getJob());
+        api.getUserService()
+                .putUser(String.valueOf(-100), userRequest, 400);
     }
 
     @Test
@@ -161,11 +144,8 @@ public class ApiTests extends BaseTest{
 
         // UpdateUser, Response code is checked in the method
         userRequest.setJob("updatedJob" + r.nextInt(999));
-        UpdateUserResponse updateUserResponse = api.getUserService()
-                .putUser(String.valueOf(12.23212), userRequest, 400)
-                .as(UpdateUserResponse.class);
-
-        assertEquals(updateUserResponse.getJob(),userRequest.getJob());
+        api.getUserService()
+                .putUser(String.valueOf(12.23212), userRequest, 400);
     }
 
     @Test
