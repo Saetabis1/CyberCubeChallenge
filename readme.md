@@ -1,14 +1,8 @@
-# Interview Challenge
+# Java E2E Framework
 
-## Assignment
-
-Take https://www.cybcube.com/careers/vacancies/ site as a basis and develop several automated tests using Java.
+Takes https://www.cybcube.com/careers/vacancies/ site as a basis and develop several automated tests using Java.
 
 Implement user scenarios (CREATE, UPDATE, DELETE) to test REST services (https://reqres.in/).
-
-Think about negative test cases and implement them.
-
-All the tests have to be runnable and the result might be posted on GitHub
 
 ## Project structure
 
