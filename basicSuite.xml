@@ -3,18 +3,18 @@
 <suite thread-count="1" verbose="1" name="Basic suite" annotations="JDK" parallel="tests">
 
     <listeners>
-        <listener class-name="cybercubeChallenge.listener.ExtentTestNGIReporterListener" />
+        <listener class-name="framework.listener.ExtentTestNGIReporterListener" />
     </listeners>
 
     <test name="apiTests">
         <classes>
-            <class name="cybercubeChallenge.ApiTests"/>
+            <class name="framework.ApiTests"/>
         </classes>
     </test>
 
     <test name="uiTests">
         <classes>
-            <class name="cybercubeChallenge.UiTests"/>
+            <class name="framework.UiTests"/>
         </classes>
     </test>
 </suite>

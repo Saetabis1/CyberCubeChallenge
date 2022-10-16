@@ -1,21 +1,17 @@
-package cybercubeChallenge;
+package framework;
 
-import cybercubeChallenge.api.Services;
-import cybercubeChallenge.ui.common.PagesConfig;
-import cybercubeChallenge.ui.common.ResourceNotFoundException;
-import cybercubeChallenge.ui.pages.BasePageActions;
+import framework.api.Services;
+import framework.ui.common.PagesConfig;
+import framework.ui.common.ResourceNotFoundException;
+import framework.ui.pages.BasePageActions;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import lombok.extern.log4j.Log4j;
 import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.BeforeSuite;
 import org.testng.asserts.SoftAssert;
 
 import java.lang.reflect.InvocationTargetException;
-import java.util.HashMap;
-import java.util.Map;
 
 import static com.google.common.base.Preconditions.checkArgument;
 

@@ -1,4 +1,4 @@
-package cybercubeChallenge.api;
+package framework.api;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.MapperFeature;

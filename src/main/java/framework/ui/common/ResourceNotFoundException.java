@@ -1,4 +1,4 @@
-package cybercubeChallenge.ui.common;
+package framework.ui.common;
 
 public class ResourceNotFoundException extends RuntimeException {
     public ResourceNotFoundException(String s, ReflectiveOperationException e) {

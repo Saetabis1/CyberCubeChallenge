@@ -1,4 +1,4 @@
-package cybercubeChallenge.api.requests;
+package framework.api.requests;
 
 import lombok.Builder;
 import lombok.Data;

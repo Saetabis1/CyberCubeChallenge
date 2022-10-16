@@ -1,6 +1,6 @@
-package cybercubeChallenge;
+package framework;
 
-import cybercubeChallenge.ui.pages.*;
+import framework.ui.pages.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
@@ -65,19 +65,5 @@ public class UiTests extends BaseTest {
                         .getText(), "Operations"));
 
         assertEquals(vacanciesPage.groupTeams.size(), 1);
-    }
-
-    @Test
-    public void searchJobByLocationAndTeamWithoutEntries() {
-        VacanciesPage vacanciesPage = navigateToPage(pagesConfig.getVacancies(), VacanciesPage.class);
-
-        vacanciesPage.filterLocation("Tallinn");
-        vacanciesPage.filterTeam("Client Success");
-
-        assertEquals(vacanciesPage.groupItems.size(), 0);
-
-        assertEquals(vacanciesPage.groupTeams.size(), 0);
-
-        assertEquals(vacanciesPage.noVacanciesMessage.getText(), "There are no jobs matching this criteria, please try resetting the filters above.");
     }
 }

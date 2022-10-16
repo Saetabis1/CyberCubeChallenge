@@ -1,4 +1,4 @@
-package cybercubeChallenge.ui.common;
+package framework.ui.common;
 
 import lombok.Data;
 

@@ -1,8 +1,6 @@
-package cybercubeChallenge.api;
+package framework.api;
 
-import cybercubeChallenge.api.requests.CreateUserRequest;
-import cybercubeChallenge.api.responses.CreateUserResponse;
-import cybercubeChallenge.api.responses.UpdateUserResponse;
+import framework.api.requests.CreateUserRequest;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 

@@ -1,4 +1,4 @@
-package cybercubeChallenge.api;
+package framework.api;
 
 import io.restassured.RestAssured;
 import io.restassured.config.RestAssuredConfig;

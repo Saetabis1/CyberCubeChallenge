@@ -1,8 +1,8 @@
-package cybercubeChallenge.ui.pages;
+package framework.ui.pages;
 
 import com.google.common.base.Charsets;
 import com.google.common.io.Resources;
-import cybercubeChallenge.ui.common.ResourceNotFoundException;
+import framework.ui.common.ResourceNotFoundException;
 import lombok.extern.log4j.Log4j;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang3.StringUtils;
